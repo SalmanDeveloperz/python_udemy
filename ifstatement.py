@@ -14,11 +14,11 @@ grade= 87
 
 if grade<=59:
     print("F")
-elif grade>59 and grade<=69:
+elif 59 < grade <= 69:
     print("D")
-elif grade>69 and grade<79:
+elif 69 < grade < 79:
     print("C")
-elif grade>79 and grade<89:
+elif 79 < grade < 89:
     print("B")
 else:
     print("A")
