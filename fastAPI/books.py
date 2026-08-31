@@ -10,8 +10,8 @@ BOOKS=[
     {'title': 'Title One', 'author': 'Zain', 'category': 'Computer'}
 
 ]
-@app.get("/books")
-async def read_all_books():
+@app.get("/books") #root decorator
+async def read_all_books(): #FastAPI supports asynchronous endpoints. so tha't why used async
     return BOOKS
 
 @app.get("/books/mybook")
