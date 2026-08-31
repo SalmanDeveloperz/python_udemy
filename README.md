@@ -11,6 +11,10 @@ python -m venv fastvenv
 fastvenv\Scripts\activate.bat
 ```
 
+## Endpoints:
+An endpoint are a specific doorway into your API.
+If your API is a building, each endpoint is a different door that performs a particular job.
+
 ## Uvicorn:-
 Uvicorn is the FAST API server
 
