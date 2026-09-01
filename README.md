@@ -54,3 +54,17 @@ It's the way to filter data based on the URL provider. It have name=value pairs
 @app.get("/search_books")
 async def search_books_by_name_and_category(book: str, category: str):
 ```
+## What is Pydantics:
+
+Pydantics is libraray of Python used for data modeling, data parsing, and has efficient
+error handling
+```
+from pydantic import BaseModel
+```
+
+
+async def create_book(book_request: ValidRequest):
+    new_book= Book(**book_request.model_dump())
+
+    
+
