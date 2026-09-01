@@ -38,6 +38,46 @@ async def search(id:str, name:str):
     return result
 
 
+"""
+Search author by id using Path parameter or Query parameter
+"""
+@app.get("/books/search_id{id}")
+async def book_id_search(book_id: str):
+    book_result=[]
+    for i in BOOKS:
+        if i.get('book_id').casefold()== book_id.casefold():
+            book_result.append(i)
+
+    return book_result
+
+
+"""
+POST
+"""
+
+@app.post("/books/new_book")
+async def add_book(new_book=Body()):
+    BOOKS.append(new_book)
+
+
+
+
+"""
+DELETE
+"""
+
+@app.delete("/books/del_book")
+async def remove_book(del_book=str):
+    for i in range(len(BOOKS)):
+        if BOOKS[i].get('book_id').casefold()== del_book.casefold:
+            BOOKS.pop(i)
+            break
+
+
+
+
+
+
 
 """
 PUT 
@@ -49,3 +89,7 @@ async def update(update_book=Body()):
     for i in range(len(BOOKS)):
         if BOOKS[i].get('book_id').casefold()== update_book.get('book_id').casefold():
             BOOKS[i]=update_book
+
+
+
+
