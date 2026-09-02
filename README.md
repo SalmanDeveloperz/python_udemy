@@ -128,3 +128,7 @@ An error that occured on the server.
 
 
 
+## HTTP Exceptions:
+```
+rasie HTTPException(status_code=404 , detail='Not found/not added or deleted successfully')
+```
