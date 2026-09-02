@@ -66,5 +66,65 @@ from pydantic import BaseModel
 async def create_book(book_request: ValidRequest):
     new_book= Book(**book_request.model_dump())
 
-    
+--- 
+
+## Status Codes
+
+Help to client to understand what happened on the server side application.
+
+Ensure if the request submission successful or not.
+
+---
+
+### 1xx (100 series)
+
+Request is in progress, something happening behind scenes.
+
+---
+
+### 2xx (200 series): Successful Requests
+
+- **200: OK**
+  - Successfully retured data to client, mostly GET request.
+
+- **201: Created**
+  - Successfully created a new resource, when POST request happened.
+
+- **204: No Content**
+  - The request has been successful, did not create an entity nor return anything. Commonly used with PUT requests.
+
+---
+
+### 3xx (300 series): Redirection
+
+Furture actions must be complete.
+
+---
+
+### 4xx (400 series): Client Errors
+
+Caused by client.
+
+- **400: Bad Request**
+  - Cannot process request due to client error. Commonly used for invalid request methods.
+
+- **401: Unauthorized**
+  - Client does not have valid authentication for target resources.
+
+- **404: Not Found**
+  - The client requested resources can not be found.
+
+- **422: Unprocessable Entity**
+  - Semantic Errors in Client Request.
+
+---
+
+### 5xx (500 series): Server Errors
+
+An error that occured on the server.
+
+- **500: Internal Server Error**
+  - Generic Error Message, when an unexpected issue on the server happened.
+
+
 
