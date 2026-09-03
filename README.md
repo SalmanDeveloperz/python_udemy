@@ -23,15 +23,17 @@ For uvicorn Installation:-
 pip install "uvicorn[standard]"
 ```
 
-## Path Parameters:
-the way for us to be able to locate in FASTAPI where we want an application to run and it's just overall path or the URL
-
 ```
 uvicorn books:app --reload
 ```
+## Path Parameters:
+Path Parameters are dynamic variables embedded directly inside the URL path. They are primarily used to uniquely pinpoint a specific resource within an API.
+```
+@app.get("/items/{item_id}")
+```
 
 ## casefold():
-casefold() converts a string into a form designed for case-insensitive comparison.
+casefold() converts a string into a form designed for case-insensitive comparison. It makes strings into lowercase like `"Salman" = "salman"`
 
 ## Path parameter:
 A path parameter is a variable value embedded directly into the URL path that identifies or selects a specific resource.
