@@ -1,6 +1,6 @@
 # GET REQUEST
 
-## For installation of Python virtual Environment:-
+## For installation of Python virtual Environment on local:-
 
 ```
 python -m venv fastvenv
