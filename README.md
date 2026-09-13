@@ -114,7 +114,7 @@ Caused by client.
 
 An error that occured on the server.
 
-- **500: Internal Server Error**
+- **500: Internal Server Errors**
   - Generic Error Message, when an unexpected issue on the server happened.
 
 
