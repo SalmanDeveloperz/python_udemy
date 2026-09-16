@@ -107,7 +107,6 @@ Caused by client.
 
 - **422: Unprocessable Entity**
   - Semantic Errors in Client Request.
-
 ---
 
 ### 5xx (500 series): Server Errors
