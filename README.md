@@ -1,4 +1,4 @@
-# GET REQUESTS
+# GET REQUEST
 
 ## For installation of Python virtual Environment on local:-
 
